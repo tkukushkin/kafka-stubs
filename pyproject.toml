@@ -9,7 +9,7 @@ requires-python = ">=3.10"
 authors = [{ name = "Timofei Kukushkin", email = "tima@kukushkin.me" }]
 description = "Type stubs for Confluent Kafka Python client"
 readme = "README.md"
-dependencies = ["confluent-kafka"]
+dependencies = ["confluent-kafka>=2.10.0"]
 license = "MIT"
 license-files = ["LICENSE"]
 classifiers = [

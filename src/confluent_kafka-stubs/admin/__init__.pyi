@@ -1,7 +1,8 @@
 import logging
 from concurrent.futures import Future
-from typing import Any, Literal, overload
+from typing import Literal, overload
 
+from confluent_kafka._config import BaseConfig
 from confluent_kafka._model import (
     ConsumerGroupState,
     ConsumerGroupTopicPartitions,
@@ -72,7 +73,7 @@ from confluent_kafka.cimpl import (
 )
 
 class AdminClient:
-    def __init__(self, conf: dict[str, Any], logger: logging.Logger | None = None) -> None: ...
+    def __init__(self, conf: BaseConfig, logger: logging.Logger | None = None) -> None: ...
     def create_topics(
         self,
         new_topics: list[NewTopic],

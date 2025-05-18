@@ -73,7 +73,7 @@ from confluent_kafka.cimpl import (
 )
 
 class AdminClient:
-    def __init__(self, conf: BaseConfig, logger: logging.Logger | None = None) -> None: ...
+    def __init__(self, conf: BaseConfig, *, logger: logging.Logger | None = None) -> None: ...
     def create_topics(
         self,
         new_topics: list[NewTopic],
